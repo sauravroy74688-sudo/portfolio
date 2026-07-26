@@ -976,7 +976,7 @@
                         ctx.beginPath();
                         ctx.moveTo(particles[i].x, particles[i].y);
                         ctx.lineTo(particles[j].x, particles[j].y);
-                        ctx.strokeStyle = ⁠ rgba(58, 134, 255, ${0.15 * (1 - dist / 180)}) ⁠;
+                        ctx.strokeStyle = `rgba(58, 134, 255, ${0.15 * (1 - dist / 180)})`;
                         ctx.lineWidth = 1;
                         ctx.stroke();
                     }
@@ -1018,9 +1018,9 @@
             const message = document.getElementById('form-message').value;
 
             const myWhatsApp = '8801644039270';
-            const formattedMessage = ⁠ *New Portfolio Website Inquiry*%0A%0A*Name:* ${encodeURIComponent(name)}%0A*Phone:* ${encodeURIComponent(phone)}%0A*Email:* ${encodeURIComponent(email)}%0A*Message:* ${encodeURIComponent(message)} ⁠;
+            const formattedMessage = `*New Portfolio Website Inquiry*%0A%0A*Name:* ${encodeURIComponent(name)}%0A*Phone:* ${encodeURIComponent(phone)}%0A*Email:* ${encodeURIComponent(email)}%0A*Message:* ${encodeURIComponent(message)}`;
 
-            window.open(⁠ https://api.whatsapp.com/send?phone=${myWhatsApp}&text=${formattedMessage} ⁠, '_blank');
+            window.open(`https://api.whatsapp.com/send?phone=${myWhatsApp}&text=${formattedMessage}`, '_blank');
         });
 
         // Initialize script functions after DOM load
